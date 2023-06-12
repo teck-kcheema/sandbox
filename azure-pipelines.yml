@@ -4,15 +4,14 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool: vmss-win2019-ado-hub-predev
 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
+jobs:
+  - job: Test
+    steps:
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Write your commands here
       
-      Write-Host "Hello World"
+          echo Hello world
