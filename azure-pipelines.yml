@@ -7,21 +7,12 @@
 trigger:
 - master
 
-pool: vmss-ado-hub-predev
+pool: vmss-win2019-ado-hub-predev
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    echo $PWD
-    echo $AGENT_TOOLSDIRECTORY
-  displayName: 'Run a multi-line script'
-  
-- task: UsePythonVersion@0
+- task: PowerShell@2
   inputs:
-    versionSpec: '3.0'
-    addToPath: true
-    architecture: 'x64'
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host "Hello World"
