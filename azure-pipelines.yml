@@ -5,18 +5,12 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-pool: vmss-win2019-ado-hub-predev
+pool: ubuntu2204
 
-jobs:
-  - job: Test
-    steps:
-    - task: CmdLine@2
-      inputs:
-        script: |
-          echo Write your commands here
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
       
-          echo Hello world
-    - task: IISWebAppDeploymentOnMachineGroup@0
-      inputs:
-        WebSiteName: 'test'
-        Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
+      echo 'Hello world'
