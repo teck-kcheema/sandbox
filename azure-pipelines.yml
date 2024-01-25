@@ -14,8 +14,9 @@ steps:
       # Write your commands here
       
       echo 'Hello world'
-      az
-      docker
+      az --version
+      node -v
+      docker --version
       sqlcmd
       pwsh --version
       python --version
