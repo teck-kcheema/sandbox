@@ -5,7 +5,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-pool: ubuntu2204
+pool: vmss-ado-hub-prod
 steps:
 - task: Bash@3
   inputs:
