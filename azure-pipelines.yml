@@ -15,3 +15,7 @@ steps:
       
       echo 'Hello world'
       az
+      docker
+      sqlcmd
+      pwsh
+      python
