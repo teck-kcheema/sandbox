@@ -6,7 +6,7 @@
 # https://aka.ms/yaml
 
 pool: ubuntu2204
-
+steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
