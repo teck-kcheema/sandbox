@@ -17,5 +17,5 @@ steps:
       az
       docker
       sqlcmd
-      pwsh
+      pwsh --version
       python3 --version
