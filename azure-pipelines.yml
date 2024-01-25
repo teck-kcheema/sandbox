@@ -18,4 +18,4 @@ steps:
       docker
       sqlcmd
       pwsh
-      python
+      python3 --version
