@@ -15,6 +15,7 @@ steps:
       
       echo 'Hello world'
       az --version
+      python --version
       docker --version
       sqlcmd
       pwsh --version
