@@ -17,7 +17,7 @@ steps:
     script: |
       # Write your commands here
       nslookup desprodcontainers.azurecr.io
-      curl -k -vvvv -o image.tar https://desprodcontainers.privatelink.azurecr.io/des-cicd/des_cicd_pipeline_img:latest
+      curl -k -vvvv -o image.tar https://desprodcontainers.privatelink.azurecr.io/des-cicd/des_cicd_pipeline_img
       ls -l
      #docker login desprodcontainers.azurecr.io
       #echo 'Hello world'
