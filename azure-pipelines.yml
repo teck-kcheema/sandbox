@@ -5,6 +5,12 @@
 
 pool: vmss-ado-hub-ubuntu2204
 steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'arm-tkdata-comn-prod'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az acr repository list --name desprodcontainers'
 - task: Docker@2
   inputs:
     containerRegistry: 'acr-tkdata-comn-prod'
