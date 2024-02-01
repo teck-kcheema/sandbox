@@ -15,6 +15,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      docker pull nginx
       # Write your commands here
       az acr repository list --name desprodcontainers
       nslookup desprodcontainers.azurecr.io
