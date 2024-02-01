@@ -10,7 +10,7 @@ steps:
     azureSubscription: 'arm-tkdata-comn-prod'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az acr repository list --name desprodcontainers'
+    inlineScript: 'az acr repository list --name desprodcontainers && docker pull desprodcontainers.azurecr.io/des-cicd/des_cicd_pipeline_img'
 - task: Docker@2
   inputs:
     containerRegistry: 'acr-tkdata-comn-prod'
