@@ -11,13 +11,16 @@ steps:
     command: 'login'
     addPipelineData: false
     addBaseImageData: false
+- task: Docker@2
+  inputs:
+    containerRegistry: 'acr-tkdata-comn-prod'
+    command: 'start'
+    container: 'des_cicd_pipeline_img'
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
       # Write your commands here
-      apt-get install jq
-      sh dockerupdate.sh
       nslookup desprodcontainers.azurecr.io
       curl -k -vvvv https://desprodcontainers.azurecr.io/v2/des_cicd_pipeline_img/manifests/latest
       docker pull desprodcontainers.azurecr.io/des-cicd/des_cicd_pipeline_img 
