@@ -11,11 +11,6 @@ steps:
     command: 'login'
     addPipelineData: false
     addBaseImageData: false
-- task: Docker@2
-  inputs:
-    containerRegistry: 'acr-tkdata-comn-prod'
-    command: 'start'
-    container: 'des_cicd_pipeline_img'
 - task: Bash@3
   inputs:
     targetType: 'inline'
