@@ -3,7 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-pool: vmss-ado-hub-prod
+pool: vmss-ado-hub-2204
 steps:
 - task: Docker@2
   inputs:
