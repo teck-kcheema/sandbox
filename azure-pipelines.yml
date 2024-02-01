@@ -18,6 +18,8 @@ steps:
       # Write your commands here
       nslookup desprodcontainers.azurecr.io
       curl -k -vvvv https://desprodcontainers.azurecr.io/v2/des_cicd_pipeline_img/manifests/latest
+      sudo systemctl stop docker
+      dockerd --insecure-registry 10.188.152.16:443 &
       docker pull 10.188.152.16/des-cicd/des_cicd_pipeline_img 
       ls -l
      #docker login desprodcontainers.azurecr.io
