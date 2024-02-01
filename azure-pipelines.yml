@@ -5,7 +5,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-pool: vmss-ado-hub-ubuntu2204
+pool: vmss-ado-hub-prod
 steps:
 - task: Bash@3
   inputs:
@@ -13,10 +13,11 @@ steps:
     script: |
       # Write your commands here
       
-      echo 'Hello world'
-      az --version
-      python --version
-      docker --version
-      sqlcmd
-      pwsh --version
-      python3 --version
+      docker login desprodcontainers.azurecr.io
+      #echo 'Hello world'
+      #az --version
+      #python --version
+      #docker --version
+      #sqlcmd
+      #pwsh --version
+      #python3 --version
